@@ -5,13 +5,13 @@
 class EspIdf < Formula
   desc "ESP-IDF"
   homepage "https://github.com/espressif/esp-idf"
-  url "https://github.com/espressif/esp-idf.git", :using => :git, :branch => :master
+  url "https://github.com/espressif/esp-idf.git", :using => :git, :tag => "v3.0"
   depends_on "xtensa-esp32-elf"
   # depends_on "pyserial" => :python
-  depends_on :python => ['pyserial']
+  depends_on "python@2" => ['pyserial']
 
   def install
-    ENV.deparallelize 
+    ENV.deparallelize
     # system "git", "submodule", "update", "--init"
 
     # libexec.install Dir["*"]
