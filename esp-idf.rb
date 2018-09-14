@@ -5,7 +5,7 @@
 class EspIdf < Formula
   desc "ESP-IDF"
   homepage "https://github.com/espressif/esp-idf"
-  url "https://github.com/espressif/esp-idf.git", :using => :git, :tag => "v3.0"
+  url "https://github.com/espressif/esp-idf.git", :using => :git, :tag => "v3.1"
   depends_on "xtensa-esp32-elf"
   # depends_on "pyserial" => :python
   depends_on "python@2" => ['pyserial']
@@ -18,7 +18,7 @@ class EspIdf < Formula
     prefix.install Dir["*"]
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     You may wish to add the ESP-IDF environment (.profile, .bash_profile):
       export IDF_PATH=#{opt_prefix}
     EOS
