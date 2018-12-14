@@ -5,7 +5,7 @@
 class EspIdf < Formula
   desc "ESP-IDF"
   homepage "https://github.com/espressif/esp-idf"
-  url "https://github.com/espressif/esp-idf.git", :using => :git, :tag => "v3.1"
+  url "https://github.com/espressif/esp-idf.git", :using => :git, :tag => "v3.2-beta1"
   depends_on "xtensa-esp32-elf"
   # depends_on "pyserial" => :python
   depends_on "python@2" => ['pyserial']
